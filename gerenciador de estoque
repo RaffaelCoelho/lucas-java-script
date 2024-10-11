@@ -1,0 +1,24 @@
+const estoque = {
+    "Arroz": 10,
+    "Feijão": 5,
+    "Açucar": 8,
+    "Sal": 1
+};
+
+console.log("Estoque inicial:", estoque);
+
+const produtosVendidos = ["Arroz", "Feijão", "Arroz", "Açucar", "Sal", "Arroz", "Feijão","Sal"];
+console.log("");
+for (const produto of produtosVendidos) {
+    if (estoque[produto] > 0) {
+        estoque[produto]--;
+        
+        console.log(`Venda realizada: ${produto}. Estoque restante: ${estoque[produto]}`);
+    } else {
+        console.log(`Produto esgotado: ${produto}`);
+    }
+}
+
+
+console.log("");
+console.log("Estoque final:", estoque);
